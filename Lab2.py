@@ -23,11 +23,15 @@ def find_min_max(temp_list):
     return min_max_list
 
 def sort_temperature(temp_list):
-    sorted_list = temp_list.sort()
+    print(temp_list)
+    sorted_list = temp_list.sort(reverse = False)
+    print(sorted_list)
     return sorted_list
 
 def calc_median_temperature(temp_list):
+    print(temp_list)
     sorted_list = sort_temperature(temp_list)
+    print(sorted_list)
     mid_index = len(sorted_list) // 2
     if (len(sorted_list) % 2 == 0):
         median_temp = (sorted_list[mid_index] + sorted_list[mid_index - 1]) / 2
